@@ -1,132 +1,168 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-       
-        <link href="css/css-bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="css/estilo.css" rel="stylesheet" />
-        <title>App Fernando</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand text-white " href="#">Meu App</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link  text-white " href="#">Features</a>
-                  <a class="nav-link text-white " href="#">Pricing</a>
-                  <a class="nav-link  text-white ">Disabled</a>
-                </div>
-              </div>
-            </div>
-          </nav>
 
-        <div class="row">
-            <div class="col-sm-12 col-xs-12">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="cep" placeholder="Cep" aria-label="Cep" aria-describedby="button">
-                    <button class="btn btn-primary" id="botao">Pesquisar CEP</button>
-                  </div>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+
+  <link href="css/css-bootstrap/bootstrap.css" rel="stylesheet" />
+  <link href="css/estilo.css" rel="stylesheet" />
+  <title>App Fernando</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+  <div data-role="page" id="pag1">
+    <div data-role="header">
+      pagina 1
+    </div>
+
+    <div role="main" class="ui-content"></div>
+
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="cep" placeholder="Cep" aria-label="Cep" aria-describedby="button">
+          <button class="btn btn-primary" id="botao">Pesquisar CEP</button>
         </div>
-        <div class="row">
-          <div class="col-xs-12">
-              <label>Nome</label>
-              <input class="form-control" type="text" id="nome" />
-          </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-            <label>Documento</label>
-            <input class="form-control" type="text" id="documento" />
-        </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
-          <label>Celular</label>
-          <input class="form-control" type="text" id="celular" />
+        <label>Nome</label>
+        <input class="form-control" type="text" id="nome" />
       </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Documento</label>
+        <input class="form-control" type="text" id="documento" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Celular</label>
+        <input class="form-control" type="text" id="celular" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
         <label>Endereço</label>
         <input class="form-control" type="text" id="logradouro" />
-    </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-      <label>Numero</label>
-      <input class="form-control" type="text" id="numero" />
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-      <label>Bairro</label>
-      <input class="form-control" type="text" id="bairro" />
-  </div>
-</div>
-
-        <div class="row">
-            <div class="col-xs-12">
-                <label>Cidade</label>
-                <input class="form-control" type="text" id="cidade" />
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-              <label>Estado</label>
-              <input class="form-control" type="text" id="estado" />
-          </div>
       </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-           <button class="btn btn-success" onclick="enviar()" >
-            Salvar dados
-           </button>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Numero</label>
+        <input class="form-control" type="text" id="numero" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Bairro</label>
+        <input class="form-control" type="text" id="bairro" />
+      </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12">
-         <button class="btn btn-warning" onclick="lerclientes()" >
-          Ler Clientes
-         </button>
+        <label>Cidade</label>
+        <input class="form-control" type="text" id="cidade" />
       </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Estado</label>
+        <input class="form-control" type="text" id="estado" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-success" onclick="enviar()">
+          Salvar
+        </button>
+      </div>
+
+    </div>
+
+    <a href="#pag2"> Visualizar Clientes</a>
+    <br>
+    <a href="#pag3"> Login</a>
   </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Celular</th>
-    </tr>
-  </thead>
-  <tbody id="corpotabela"></tbody>
-</table>
+  <div data-role="page" id="pag2">
+    <div data-role="header">
+      pagina2
+    </div>
 
-       <button class="btn btn-danger" onclick="salvarLocal('Nome','Joaquim')">
-          Cadastrar no LocalStoreage
-       </button>
-        <br/>
-        <button class="btn btn-warning" onclick="lerLocal()">
-          Ler Storeage
+    <div role="main" class="ui-content"></div>
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Celular</th>
+        </tr>
+      </thead>
+      <tbody id="corpotabela"></tbody>
+    </table>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-warning" onclick="lerclientes()">
+          Ler Clientes
         </button>
+      </div>
+    </div>
+    <a href="#pag1"> Pagina Principal</a>
+    <br>
+    <a href="#pag3"> Login</a>
+  </div>
+  <div data-role="page" id="pag3">
+    <div data-role="header">
+      pagina3
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Nome de Usuario/Email</label>
+        <input class="form-control" type="text" id="login" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Senha</label>
+        <input class="form-control" type="password" id="senha" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-warning" onclick="">
+          ENTRAR
+        </button>
+      </div>
+    </div>
+    <a href="#pag1"> Pagina Principal</a>
+    <br>
+    <a href="#pag2"> Visualizar</a>
+  </div>
 
 
-        <script src="js/js-bootstrap/bootstrap.bundle.js"></script>
-        <script src="js/index.js"></script>
-        <script src="js/cadastrocliente.js" ></script>
-        <script src="js/lerclientes.js" ></script>
-        <script src="js/armazenar.js"></script>
 
-    </body>
+  <script src="js/js-bootstrap/bootstrap.bundle.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/cadastrocliente.js"></script>
+  <script src="js/lerclientes.js"></script>
+  <script src="js/armazenar.js"></script>
+
+</body>
+
 </html>
